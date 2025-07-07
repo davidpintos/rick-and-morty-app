@@ -25,7 +25,7 @@ const DetailsScreen = ({ navigation, route }: Props) => {
   if (error || !character) {
     return (
       <View style={styles.centeredContainer}>
-        <Text>{error || 'Character not found'}</Text>
+        <Text>{error || 'Personaje no encontrado'}</Text>
         <Button title="Go to Home" onPress={() => navigation.popToTop()} />
       </View>
     );
@@ -35,11 +35,11 @@ const DetailsScreen = ({ navigation, route }: Props) => {
     <View style={styles.container}>
       <Image source={{ uri: character.image }} style={styles.image} />
       <Text style={styles.name}>{character.name}</Text>
-      <Text style={styles.detail}>Status: {character.status}</Text>
-      <Text style={styles.detail}>Species: {character.species}</Text>
-      <Text style={styles.detail}>Origin: {character.origin.name}</Text>
+      <Text style={styles.detail}>Estado: {character.status}</Text>
+      <Text style={styles.detail}>Especie: {character.species}</Text>
+      <Text style={styles.detail}>Origen: {character.origin.name}</Text>
       <Button
-        title={character && isFavorite(character.id) ? 'Remove from Favorites' : 'Add to Favorites'}
+        title={character && isFavorite(character.id) ? 'Quitar de Favoritos' : 'Agregar a Favoritos'}
         onPress={() => {
           if (character) {
             if (isFavorite(character.id)) {
@@ -50,7 +50,7 @@ const DetailsScreen = ({ navigation, route }: Props) => {
           }
         }}
       />
-      <Button title="Go to Home" onPress={() => navigation.popToTop()} />
+      <Button title="Ir al Inicio" onPress={() => navigation.popToTop()} />
     </View>
   );
 };

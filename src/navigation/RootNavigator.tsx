@@ -15,17 +15,17 @@ const RootNavigator = () => {
         name="List"
         component={ListScreen}
         options={({ navigation }) => ({
-          title: 'Rick & Morty Characters',
+          title: 'Rick and Morty Personajes',
           headerRight: () => (
             <Button
               onPress={() => navigation.navigate('Favorites')}
-              title="Favorites"
+              title="Favoritos"
             />
           ),
         })}
       />
-      <Stack.Screen name="Details" component={DetailsScreen} options={{ title: 'Character Details' }} />
-      <Stack.Screen name="Favorites" component={FavoritesScreen} options={{ title: 'Favorite Characters' }} />
+      <Stack.Screen name="Details" component={DetailsScreen} options={{ title: 'Detalle del Personaje' }} />
+      <Stack.Screen name="Favorites" component={FavoritesScreen} options={{ title: 'Personajes Favoritos' }} />
     </Stack.Navigator>
   );
 };

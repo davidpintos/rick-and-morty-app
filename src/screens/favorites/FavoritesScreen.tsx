@@ -13,7 +13,7 @@ const FavoritesScreen = ({ navigation }: Props) => {
   if (favorites.length === 0) {
     return (
       <View style={styles.centeredContainer}>
-        <Text>You have no favorites yet.</Text>
+        <Text>No tienes favoritos aún.</Text>
       </View>
     );
   }
